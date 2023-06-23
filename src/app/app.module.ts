@@ -7,15 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AddTodoComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
