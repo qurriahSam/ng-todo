@@ -11,7 +11,9 @@
       mat-flat-button
       color="primary"
       class="py-5"
-      (click)="addTask({ task: todoAdd.value, completed: false })"
+      (click)="
+        addTask({ task: todoAdd.value, completed: false }); todoAdd.value = ''
+      "
     >
       Add
     </button>
