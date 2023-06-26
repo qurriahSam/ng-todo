@@ -10,7 +10,6 @@ import { Todo } from 'src/app/todo';
 })
 export class AddTodoComponent {
   @Output() newTodoItemEvent = new EventEmitter<Todo>();
-  todo: Todo = { task: '', completed: false };
 
   constructor(private _todoService: TodoService) {}
 
@@ -18,7 +17,6 @@ export class AddTodoComponent {
     this._todoService.addTodo(todo);
     console.log(todo);
     this.addNewTodo(todo);
-    //    this.todo.task = '';
   }
 
   addNewTodo(todo: Todo) {
