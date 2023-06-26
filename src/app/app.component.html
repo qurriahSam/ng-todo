@@ -4,7 +4,8 @@
 <div class="container max-w-screen-md mx-auto">
   <mat-tab-group>
     <mat-tab label="All">
-      <app-add-todo></app-add-todo>
+      <app-add-todo (newTodoItemEvent)="addTodo($event)"></app-add-todo>
+      <app-todos [todos]="todos"></app-todos>
     </mat-tab>
     <mat-tab label="Active">
       <app-add-todo></app-add-todo>
