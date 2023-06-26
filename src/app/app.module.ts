@@ -9,9 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { FormsModule } from '@angular/forms';
+import { TodosComponent } from './components/todos/todos.component';
 
 @NgModule({
-  declarations: [AppComponent, AddTodoComponent],
+  declarations: [AppComponent, AddTodoComponent, TodosComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -19,6 +21,7 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
