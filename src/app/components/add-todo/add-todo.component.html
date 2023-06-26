@@ -3,8 +3,17 @@
     <input
       type="text"
       name="todo"
-      class="rounded-md border-gray-300 me-3 md:w-96"
+      class="rounded-md border-gray-300 me-3 sm:w-96"
+      (ngModel)="(todo.task)"
+      #todoAdd
     />
-    <button mat-flat-button color="primary" class="py-5">Add</button>
+    <button
+      mat-flat-button
+      color="primary"
+      class="py-5"
+      (click)="addTask({ task: todoAdd.value, completed: false })"
+    >
+      Add
+    </button>
   </form>
 </div>
