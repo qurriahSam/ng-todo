@@ -1,3 +1,11 @@
 <div>
-  <p>{{ todos | json }}</p>
+  <div *ngFor="let todo of todos; let todoIndex = index">
+    <p (click)="toggleCompleted(todoIndex)">
+      <mat-checkbox [checked]="todo.completed"
+        ><span [class.line-through]="todo.completed">{{
+          todo.task
+        }}</span></mat-checkbox
+      >
+    </p>
+  </div>
 </div>

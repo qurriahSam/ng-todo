@@ -5,7 +5,10 @@
   <mat-tab-group>
     <mat-tab label="All">
       <app-add-todo (newTodoItemEvent)="addTodo($event)"></app-add-todo>
-      <app-todos [todos]="todos"></app-todos>
+      <app-todos
+        [todos]="todos"
+        (toggleCompletedEvent)="toggleCompletedStatus($event)"
+      ></app-todos>
     </mat-tab>
     <mat-tab label="Active">
       <app-add-todo></app-add-todo>

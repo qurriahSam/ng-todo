@@ -21,4 +21,8 @@ export class AppComponent {
   addTodo(newTodo: Todo) {
     this.todos.push(newTodo);
   }
+
+  toggleCompletedStatus(index: number) {
+    this.todos[index].completed = !this.todos[index].completed;
+  }
 }
