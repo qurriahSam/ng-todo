@@ -19,6 +19,12 @@ export class LocalService {
     return JSON.parse(todos) as Todo[];
   }
 
+  updateTodo(index: number) {
+    const todos = this.getTodo();
+    todos[index].completed = !todos[index].completed;
+    this.setItem(todos);
+  }
+
   private setItem(todos: Todo[]) {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
