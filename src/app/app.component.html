@@ -19,6 +19,7 @@
     </mat-tab>
     <mat-tab label="Completed">
       <app-todos
+        [completedTab]="true"
         [todos]="filterTab('completed')"
         (toggleCompletedEvent)="toggleCompletedStatus($event)"
         (deleteTodoEvent)="deleteTodo($event)"

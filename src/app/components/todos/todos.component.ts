@@ -8,6 +8,7 @@ import { Todo } from 'src/app/todo';
 })
 export class TodosComponent {
   @Input() todos: Todo[] = [];
+  @Input() completedTab = false;
   @Output() toggleCompletedEvent = new EventEmitter<string>();
   @Output() deleteTodoEvent = new EventEmitter<string>();
 
