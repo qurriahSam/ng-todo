@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">ngToDo</h1>
+<h1 align="center">Task Tracker</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://windbnb-phi.vercel.app/">
+    <a href="https://ng-todo-kappa.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/qurriahSam/windbnb">
+    <a href="https://github.com/qurriahSam/ng-todo">
       Solution
     </a>
     <span> | </span>
@@ -38,7 +38,8 @@
 
 ![screenshot](./src/assets/screenshot.png)
 
-Windbnb is a small-scale vacation rental platform inspired by the popular Airbnb. It aims to provide users with a seamless and delightful experience when searching for accommodations for their travel needs. It incorporates a user-friendly filter drawer. By clicking on the filter icon, users can access a set of filters to narrow down their search based on location and the desired number of guests.
+ngToDo app is a simple and efficient to-do list manager designed to help you stay organized and productive, it allows you to easily add new tasks, mark them as complete, and toggle between different viewing modes.
+One of the key features of the app is its ability to store data locally using local storage. This means that even if you refresh the page or close the browser, your task progress will be saved, allowing you to seamlessly continue where you left off.
 
 ### Built With
 
@@ -63,7 +64,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/qurriahSam/windbnb
+$ git clone https://github.com/qurriahSam/ng-todo
 
 # Install dependencies
 $ npm install
