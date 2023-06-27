@@ -15,6 +15,9 @@ export class AddTodoComponent {
   constructor(private _todoService: TodoService) {}
 
   addTask(todo: Todo) {
+    if (todo.task.length <= 0) {
+      return;
+    }
     this._todoService.addTodo(todo);
     console.log(todo);
     this.addNewTodo(todo);

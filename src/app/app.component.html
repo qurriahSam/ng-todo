@@ -23,6 +23,7 @@
         [todos]="filterTab('completed')"
         (toggleCompletedEvent)="toggleCompletedStatus($event)"
         (deleteTodoEvent)="deleteTodo($event)"
+        (deleteAllTodosEvent)="deleteAllTodos($event)"
       ></app-todos>
     </mat-tab>
   </mat-tab-group>

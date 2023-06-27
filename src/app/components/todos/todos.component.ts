@@ -11,6 +11,7 @@ export class TodosComponent {
   @Input() completedTab = false;
   @Output() toggleCompletedEvent = new EventEmitter<string>();
   @Output() deleteTodoEvent = new EventEmitter<string>();
+  @Output() deleteAllTodosEvent = new EventEmitter<string[]>();
 
   toggleCompleted(id: string) {
     this.toggleCompletedEvent.emit(id);
@@ -18,5 +19,12 @@ export class TodosComponent {
 
   deleteTodo(id: string) {
     this.deleteTodoEvent.emit(id);
+  }
+
+  deleteAllTodos() {
+    let todosId = this.todos.map((todo) => {
+      return todo.id;
+    });
+    this.deleteAllTodosEvent.emit(todosId);
   }
 }

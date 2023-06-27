@@ -50,4 +50,10 @@ export class AppComponent {
     }
     return this.todos;
   }
+
+  deleteAllTodos(idsArr: string[]) {
+    idsArr.forEach((id) => {
+      this.deleteTodo(id);
+    });
+  }
 }
