@@ -15,7 +15,7 @@ export class TodoService {
     this._local.addTodo(todo);
   }
 
-  toggleCompleted(index: number) {
-    this._local.updateTodo(index);
+  toggleCompleted(id: string) {
+    this._local.updateTodo(id);
   }
 }

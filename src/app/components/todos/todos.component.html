@@ -1,7 +1,7 @@
 <div>
-  <div *ngFor="let todo of todos; let todoIndex = index">
-    <p (click)="toggleCompleted(todoIndex)">
-      <mat-checkbox [checked]="todo.completed"
+  <div *ngFor="let todo of todos">
+    <p (click)="toggleCompleted(todo.id)">
+      <mat-checkbox [checked]="todo.completed" [color]="'primary'"
         ><span [class.line-through]="todo.completed">{{
           todo.task
         }}</span></mat-checkbox

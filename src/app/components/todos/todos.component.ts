@@ -8,9 +8,9 @@ import { Todo } from 'src/app/todo';
 })
 export class TodosComponent {
   @Input() todos: Todo[] = [];
-  @Output() toggleCompletedEvent = new EventEmitter<number>();
+  @Output() toggleCompletedEvent = new EventEmitter<string>();
 
-  toggleCompleted(index: number) {
-    this.toggleCompletedEvent.emit(index);
+  toggleCompleted(id: string) {
+    this.toggleCompletedEvent.emit(id);
   }
 }

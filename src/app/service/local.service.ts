@@ -19,9 +19,16 @@ export class LocalService {
     return JSON.parse(todos) as Todo[];
   }
 
-  updateTodo(index: number) {
+  updateTodo(id: string) {
     const todos = this.getTodo();
-    todos[index].completed = !todos[index].completed;
+
+    todos.forEach((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+    });
+
+    //todos[index].completed = !todos[index].completed;
     this.setItem(todos);
   }
 

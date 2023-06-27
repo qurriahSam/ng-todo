@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
+import cryptoRandomString from 'crypto-random-string';
 import { TodoService } from 'src/app/service/todo.service';
 import { Todo } from 'src/app/todo';
 
@@ -21,5 +22,10 @@ export class AddTodoComponent {
 
   addNewTodo(todo: Todo) {
     this.newTodoItemEvent.emit(todo);
+  }
+
+  getId() {
+    const id = cryptoRandomString({ length: 10 });
+    return id;
   }
 }
