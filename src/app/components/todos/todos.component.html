@@ -17,7 +17,7 @@
       <mat-icon>delete</mat-icon>
     </button>
   </div>
-  <div *ngIf="completedTab" class="flex justify-end">
+  <div *ngIf="completedTab && todos.length >= 2" class="flex justify-end">
     <button mat-flat-button color="warn" (click)="deleteAllTodos()">
       <mat-icon>delete</mat-icon>
       delete all
