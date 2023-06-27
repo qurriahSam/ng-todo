@@ -21,6 +21,7 @@
       <app-todos
         [todos]="filterTab('completed')"
         (toggleCompletedEvent)="toggleCompletedStatus($event)"
+        (deleteTodoEvent)="deleteTodo($event)"
       ></app-todos>
     </mat-tab>
   </mat-tab-group>

@@ -1,11 +1,19 @@
 <div>
-  <div *ngFor="let todo of todos">
-    <p (click)="toggleCompleted(todo.id)">
+  <div *ngFor="let todo of todos" class="flex justify-between">
+    <span (click)="toggleCompleted(todo.id)">
       <mat-checkbox [checked]="todo.completed" [color]="'primary'"
         ><span [class.line-through]="todo.completed">{{
           todo.task
         }}</span></mat-checkbox
       >
-    </p>
+    </span>
+    <button
+      mat-icon-button
+      color="primary"
+      aria-label="delete icon"
+      (click)="deleteTodo(todo.id)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
   </div>
 </div>

@@ -18,4 +18,8 @@ export class TodoService {
   toggleCompleted(id: string) {
     this._local.updateTodo(id);
   }
+
+  deleteTodo(id: string) {
+    this._local.deleteTodo(id);
+  }
 }

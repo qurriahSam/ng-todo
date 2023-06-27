@@ -32,6 +32,18 @@ export class LocalService {
     this.setItem(todos);
   }
 
+  deleteTodo(id: string) {
+    const todos = this.getTodo();
+
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].id === id) {
+        todos.splice(i, 1);
+      }
+    }
+
+    this.setItem(todos);
+  }
+
   private setItem(todos: Todo[]) {
     localStorage.setItem('todos', JSON.stringify(todos));
   }

@@ -33,6 +33,15 @@ export class AppComponent {
     this._todoService.toggleCompleted(id);
   }
 
+  deleteTodo(id: string) {
+    for (let i = 0; i < this.todos.length; i++) {
+      if (this.todos[i].id === id) {
+        this.todos.splice(i, 1);
+      }
+    }
+    this._todoService.deleteTodo(id);
+  }
+
   filterTab(label: string) {
     if (label === 'active') {
       return this.todos.filter((todo) => todo.completed === false);
