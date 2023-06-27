@@ -11,12 +11,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, AddTodoComponent, TodosComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

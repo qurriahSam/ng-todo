@@ -1,21 +1,17 @@
 <div class="container pt-4 flex justify-center">
-  <form>
+  <form
+    #form="ngForm"
+    (ngSubmit)="
+      addTask({ id: getId(), task: todoAdd.value, completed: false });
+      todoAdd.value = ''
+    "
+  >
     <input
       type="text"
       name="todo"
       class="rounded-md border-gray-300 me-3 sm:w-96"
       #todoAdd
     />
-    <button
-      mat-flat-button
-      color="primary"
-      class="py-5"
-      (click)="
-        addTask({ id: getId(), task: todoAdd.value, completed: false });
-        todoAdd.value = ''
-      "
-    >
-      Add
-    </button>
+    <button mat-flat-button color="primary" class="py-5">Add</button>
   </form>
 </div>
