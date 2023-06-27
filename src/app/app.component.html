@@ -2,7 +2,7 @@
   <span>#todo</span>
 </mat-toolbar>
 <div class="container max-w-screen-md mx-auto">
-  <mat-tab-group>
+  <mat-tab-group dynamicHeight>
     <mat-tab label="All">
       <app-add-todo (newTodoItemEvent)="addTodo($event)"></app-add-todo>
       <app-todos
